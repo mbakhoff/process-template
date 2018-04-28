@@ -1,5 +1,8 @@
 package task1;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Warmup {
 
   public static void main(String[] args) throws Exception {
@@ -12,5 +15,11 @@ public class Warmup {
 
     // make sure to inherit input/output using inheritIO()
     // don't use Process#getInputStream in this task
+
+    List<String> command = Arrays.asList("java", "-version");
+    new ProcessBuilder(command)
+        .inheritIO()
+        .start()
+        .waitFor();
   }
 }

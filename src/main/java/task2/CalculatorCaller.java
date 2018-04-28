@@ -1,5 +1,8 @@
 package task2;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class CalculatorCaller {
 
   public static void main(String[] args) throws Exception {
@@ -13,5 +16,12 @@ public class CalculatorCaller {
     // 1.2) inherit standard output/output
     // 2) wait for the calculator to finish
     //  the result should appear in the standard output
+    List<String> command = Arrays.asList(
+        "java",
+        "-cp", "target/classes",
+        "task2.Calculator",
+        "1", "+", "2"
+    );
+    new ProcessBuilder(command).inheritIO().start().waitFor();
   }
 }
