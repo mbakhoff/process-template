@@ -9,6 +9,7 @@ public class CalculatorCaller {
     // 1.2) don't redirect input/output
     // 2) run some calculations:
     // 2.1) write a line containing two numbers and an operand to the calculator's standard input
+    //  note: flush the stream after writing each line!
     // 2.2) read a line containing the result from the calculator's standard output
     // 2.3) repeat 2 more times
     // 3) stop the calculator process

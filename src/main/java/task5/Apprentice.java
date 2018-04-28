@@ -13,6 +13,7 @@ public class Apprentice {
     // 4.2) try each location and check if the java binary exists
     //  search for LOCATION/java on linux/macos
     //  search for LOCATION/java.exe on windows
-    // 4) start java with the "-version" argument, inherit input/output
+    // 5) print the path of the java binary
+    // 6) start java with the "-version" argument, inherit input/output
   }
 }
