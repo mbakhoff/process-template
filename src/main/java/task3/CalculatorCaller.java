@@ -5,7 +5,7 @@ public class CalculatorCaller {
   public static void main(String[] args) throws Exception {
     // TODO: implement
     // 1) start the Calculator using ProcessBuilder:
-    // 1.1) create the command as in task1, but without the main class args
+    // 1.1) create the command as in task2, but without the main class args
     // 1.2) don't redirect input/output
     // 2) run some calculations:
     // 2.1) write a line containing two numbers and an operand to the calculator's standard input
