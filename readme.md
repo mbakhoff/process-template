@@ -54,7 +54,7 @@ Only the arguments **after** the main class are passed to the main method of the
 Environment variables are similar to the program arguments, but by default they are inherited from the parent process (unlike program arguments which must be specified explicitly).
 
 Common environment variables are "PATH" (used to look up programs by name), "HOME" (the home directory of the user) etc.
-Additional variables (e.g. JAVA_HOME) can be specified in system configuration.
+Additional variables (e.g. JAVA_HOME) can be specified in the system configuration.
 The variables can also be specified by the parent process when creating a child.
 
 To start a process in Java:
@@ -127,7 +127,7 @@ Once the program is started, it will run in parallel to the parent process.
 When the child finishes (whenever that is), it will return an exit value.
 A exit value of zero means that the child process was successful.
 Any other value usually means that some problem was encountered.
-The exact meaning of the exit value is decided by the process itself.
+The exact meaning of the exit value is defined by the process itself.
 
 Waiting a process to finish and reading its exit value:
 ```
@@ -148,6 +148,13 @@ public static void main(String[] args) throws Exception {
 ```
 
 When the Java main method reaches the end without throwing an exception, then the process will automatically exit with zero.
+
+It is also possible to kill another process:
+```
+Process proc = new ProcessBuilder("myprogram").start();
+proc.destroy();
+int value = proc.waitFor();
+```
 
 ## Task
 
