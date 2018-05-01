@@ -6,7 +6,7 @@ Each process is started by another process.
 A process has a process id (PID) and it also knows its parent's process id.
 
 When a process is creating a child process, it can assign the following values:
-* path to the program's binary
+* path to the program's binary (file with runnable code)
 * command line arguments
 * environment variables
 * working directory
@@ -45,7 +45,7 @@ new ProcessBuilder(command2).start(); // runs cd with 1 argument
 ```
 
 #### Arguments to the java runtime
-A java program is started with the command line `java [vm options] main-class [args]`.
+A java program is started with the command line `java [options] main-class [args]`.
 The command line arguments passed to java **before** the main class are interpreted by the java runtime (e.g. classpath and memory arguments).
 Only the arguments **after** the main class are passed to the main method of the main class.
 
@@ -98,7 +98,7 @@ builder.inheritIO();
 builder.start();
 ```
 
-Alternatively, the standard streams can can be redirected.
+Alternatively, the standard streams can be redirected.
 To redirect the stdout of a child, the parent process will create a "pipe".
 A pipe is a one-way stream - one end of the pipe is for writing and the other end of the pipe is for reading.
 The parent will give the writing end of the pipe to the child, which will become the child's stdout.
@@ -125,7 +125,7 @@ For example, the child could start streaming audio to its stdout and the parent 
 
 Once the program is started, it will run in parallel to the parent process.
 When the child finishes (whenever that is), it will return an exit value.
-A exit value of zero means that the child process was successful.
+A exit value of zero means that the child process has finished successfully and terminated.
 Any other value usually means that some problem was encountered.
 The exact meaning of the exit value is defined by the process itself.
 
