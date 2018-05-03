@@ -57,7 +57,7 @@ Common environment variables are "PATH" (used to look up programs by name), "HOM
 Additional variables (e.g. JAVA_HOME) can be specified in the system configuration.
 The variables can also be specified by the parent process when creating a child.
 
-To start a process in Java:
+To start a process in Java with modified environment variables:
 ```
 ProcessBuilder builder = new ProcessBuilder("mvn");
 builder.environment().put("JAVA_HOME", "/path/to/javahome");
@@ -74,7 +74,7 @@ Each process can also change its working directory at any moment.
 For example, when the program is started in the directory "/home/user", that directory will become its working directory.
 When the program tries to look up the file using the relative path "docs/notes.txt", then the result will be "/home/user/docs/notes.txt".
 
-To start a process in Java:
+To start a process in Java in a specified working directory:
 ```
 ProcessBuilder builder = new ProcessBuilder("ls"); // or "dir" in windows
 builder.directory(new File("/home/user"));
