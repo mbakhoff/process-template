@@ -9,5 +9,8 @@ public class Warmup {
     // 2) inherit input/output
     // 3) wait for the process to finish
     // 4) make sure the java version is visible
+
+    // make sure to inherit input/output using inheritIO()
+    // don't use Process#getInputStream in this task
   }
 }
