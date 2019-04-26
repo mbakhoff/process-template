@@ -8,7 +8,7 @@ public class CalculatorCaller {
     // 1.1) the command should consist of:
     //  java binary,
     //  classpath options (can be hardcoded to target/classes),
-    //  main class name,
+    //  main class name (full name, including package name),
     //  main class arguments (numbers and the operator)
     // 1.2) inherit standard output/output
     // 2) wait for the calculator to finish

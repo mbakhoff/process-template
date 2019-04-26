@@ -23,8 +23,8 @@ This search usually happens automatically.
 
 To start a process in Java:
 ```
-// looks up the program "date" from the PATH
-new ProcessBuilder("date").start();
+// looks up the program "netstat" from the PATH
+new ProcessBuilder("netstat").start();
 ```
 
 ### Program arguments
